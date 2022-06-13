@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2022 at 08:19 PM
+-- Generation Time: Jun 13, 2022 at 09:15 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -24,24 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_access`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `user_access` (
+CREATE TABLE `users` (
   `id` longtext NOT NULL,
-  `user_account` varchar(20) NOT NULL,
-  `user_password` varchar(50) NOT NULL
+  `user_account` longtext NOT NULL,
+  `user_password` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user_access`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `user_access` (`id`, `user_account`, `user_password`) VALUES
-('67305643-76b7-4f3c-8c43-4cfe4fd12e3d', 'test', 'pass'),
-('ca727c28-c0c3-42e8-bbde-1b7608e85336', 'smoke', 'test'),
-('8e0281ea-d31c-438a-9f6b-5fc62eff3696', 'asd', 'asd'),
-('40dc7f83-2df8-452d-9b9a-502fe7912416', 'asdo', 'asdo');
+INSERT INTO `users` (`id`, `user_account`, `user_password`) VALUES
+('b5fd2696-9afc-4d16-bb2a-f44283104fe7', 'smoke', 'test'),
+('7af56368-09a1-47cf-a96e-876e5780bcfa', 'hello', 'world'),
+('3a57fc0c-a845-4cc5-b5a2-eb04fcb3786c', 'testing', 'again');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

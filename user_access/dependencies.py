@@ -19,7 +19,7 @@ class DatabaseWrapper:
         cursor = self.connection.cursor(dictionary=True)
         result = []
         cursor.execute("""
-        SELECT * FROM user_access 
+        SELECT * FROM users 
         WHERE user_account = %s;
         """, (userAccount,))
         for row in cursor.fetchall():
@@ -36,7 +36,7 @@ class DatabaseWrapper:
             cursor = self.connection.cursor(dictionary=True)
             generateUUID = str(uuid.uuid4())
             cursor.execute("""
-            INSERT INTO user_access (id, user_account, user_password)
+            INSERT INTO users (id, user_account, user_password)
             VALUES (%s, %s, %s);
             """, (generateUUID, userAccount, userPassword))
             cursor.close()
@@ -48,7 +48,7 @@ class DatabaseWrapper:
         cursor = self.connection.cursor(dictionary=True)
         result = []
         cursor.execute("""
-        SELECT * FROM user_access 
+        SELECT * FROM users 
         WHERE user_account = %s AND user_password = %s;
         """, (userAccount, userPassword))
         for row in cursor.fetchall():

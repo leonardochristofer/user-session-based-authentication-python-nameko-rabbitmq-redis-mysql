@@ -1,4 +1,4 @@
-import dependencies
+import user_access.dependencies as dependencies
 
 from nameko.rpc import rpc
 

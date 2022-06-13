@@ -7,7 +7,7 @@ from nameko.rpc import RpcProxy
 from itertools import permutations
 from itertools import combinations
 
-from session import SessionProvider
+from gateway.session import SessionProvider
 
 class GatewayService:
 
