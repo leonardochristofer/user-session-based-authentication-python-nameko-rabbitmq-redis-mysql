@@ -9,9 +9,9 @@ This service contains:
 - `127.0.0.1:8000/permutations`
 4. Logout API (delete session)
 - `127.0.0.1:8000/logout`
-## Prerequisite to running Gateway and Service
+# Prerequisite
 This service uses python, nameko, rabbitmq, redis, and mysql. I assume that you have everything installed on your local machine.
-## Steps
+# Steps
 1. Clone this repository.
 2. Import .sql file from database folder into your local machine mysql database.
 3. Open 2 terminals.
